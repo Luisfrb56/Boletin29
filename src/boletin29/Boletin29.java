@@ -13,6 +13,7 @@ Barcos y=new Yates(3.5,3,3,3.5,"basd");
 Barcos dm=new DeportivasMotor(4.5,4,4.5,"asde");
 Factura f=new Factura();
 lista.add(y);
+
     }
     
 }

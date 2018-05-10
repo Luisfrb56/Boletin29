@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Boletin29">
+  <ClassDiagramComponents>
+    <Class name="Barcos" package="boletin29" visibility="public" isAbstract="true" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="diasOcupacion" type="int" visibility="package"/>
+        <Field name="eslora" type="double" visibility="package"/>
+        <Field name="matricula" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="diasOcupacion"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="String" name="matricula"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDiasOcupacion" returnType="int" visibility="public"/>
+        <Method name="setDiasOcupacion" returnType="void" visibility="public">
+          <Argument type="int" name="diasOcupacion"/>
+        </Method>
+        <Method name="getEslora" returnType="double" visibility="public"/>
+        <Method name="setEslora" returnType="void" visibility="public">
+          <Argument type="double" name="eslora"/>
+        </Method>
+        <Method name="getMatricula" returnType="String" visibility="public"/>
+        <Method name="setMatricula" returnType="void" visibility="public">
+          <Argument type="String" name="matricula"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="amosarPrecio" returnType="double" visibility="public"/>
+        <Method name="amosarAluguer" returnType="double" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Boletin29" package="boletin29" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DeportivasMotor" package="boletin29" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="potencia" type="double" visibility="private"/>
+        <Field name="modulo" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="potencia"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="double" name="potencia"/>
+          <Argument type="int" name="diasOcupacion"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="String" name="matricula"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPotencia" returnType="double" visibility="public"/>
+        <Method name="setPotencia" returnType="void" visibility="public">
+          <Argument type="double" name="potencia"/>
+        </Method>
+        <Method name="getEslora" returnType="double" visibility="public"/>
+        <Method name="setEslora" returnType="void" visibility="public">
+          <Argument type="double" name="eslora"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="amosarAluguer" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Factura" package="boletin29" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="precioTotal" returnType="void" visibility="public">
+          <Argument type="Barcos" name="b"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Veleros" package="boletin29" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="nMastiles" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="nMastiles"/>
+          <Argument type="int" name="diasOcupacion"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="String" name="matricula"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getnMastiles" returnType="int" visibility="public"/>
+        <Method name="setnMastiles" returnType="void" visibility="public">
+          <Argument type="int" name="nMastiles"/>
+        </Method>
+        <Method name="getEslora" returnType="double" visibility="public"/>
+        <Method name="setEslora" returnType="void" visibility="public">
+          <Argument type="double" name="eslora"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="amosarAluguer" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Yates" package="boletin29" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="potencia" type="double" visibility="private"/>
+        <Field name="nCamarotes" type="int" visibility="private"/>
+        <Field name="modulo" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="potencia"/>
+          <Argument type="int" name="nCamarotes"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="double" name="potencia"/>
+          <Argument type="int" name="nCamarotes"/>
+          <Argument type="int" name="diasOcupacion"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="String" name="matricula"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPotencia" returnType="double" visibility="public"/>
+        <Method name="setPotencia" returnType="void" visibility="public">
+          <Argument type="double" name="potencia"/>
+        </Method>
+        <Method name="getnCamarotes" returnType="int" visibility="public"/>
+        <Method name="setnCamarotes" returnType="void" visibility="public">
+          <Argument type="int" name="nCamarotes"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="amosarAluguer" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="boletin29.DeportivasMotor" target="boletin29.Barcos"/>
+    <IsRelation name="is" source="boletin29.Yates" target="boletin29.Barcos"/>
+    <UseRelation source="boletin29.Factura" target="boletin29.Barcos" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="boletin29.Veleros" target="boletin29.Barcos"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
